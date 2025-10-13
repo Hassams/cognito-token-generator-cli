@@ -1,0 +1,13 @@
+# Build artifacts
+dist/
+
+# OS specific files
+.DS_Store
+
+# Go build cache and modules (optional common ignores)
+bin/
+*.exe
+*.exe~
+*.swp
+*.out
+
