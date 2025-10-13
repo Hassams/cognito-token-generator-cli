@@ -37,6 +37,29 @@ go build -o jwtcli.exe
 
 This will generate the `jwtcli` binary (or `jwtcli.exe` for Windows) that you can run directly.
 
+### Cross-platform build (release artifacts)
+
+To build compressed binaries for Linux, macOS (Intel and Apple Silicon), and Windows, run:
+
+```bash
+chmod +x scripts/build.sh
+scripts/build.sh
+```
+
+Artifacts are created in the `dist/` directory, for example:
+
+- `jwtcli_linux_amd64.tar.gz`
+- `jwtcli_linux_arm64.tar.gz`
+- `jwtcli_darwin_amd64.tar.gz`
+- `jwtcli_darwin_arm64.tar.gz`
+- `jwtcli_windows_amd64.zip`
+
+Targets built:
+
+- Linux: amd64, arm64
+- macOS: amd64 (Intel), arm64 (Apple Silicon)
+- Windows: amd64
+
 ## Usage
 
 The CLI tool allows you to authenticate with AWS Cognito and generate JWT tokens. The tokens are copied to the system clipboard for easy access.
